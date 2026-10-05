@@ -589,6 +589,403 @@
 
         }
 
+    
+        /* =========================
+           RESPONSIVE ENHANCEMENTS
+           Tablets + Phones
+        ========================= */
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .button,
+        .nav-button,
+        a[href^="tel:"] {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        @media (max-width: 1024px) {
+
+            .container {
+                width: min(92%, 900px);
+            }
+
+            section {
+                padding: 90px 0;
+            }
+
+            .navbar {
+                height: 80px;
+            }
+
+            nav {
+                gap: 18px;
+            }
+
+            .hero {
+                min-height: 700px;
+                background-position: 58% center;
+            }
+
+            .hero-content {
+                max-width: 650px;
+            }
+
+            h1 {
+                font-size: clamp(62px, 10vw, 92px);
+            }
+
+            .intro-grid {
+                gap: 50px;
+            }
+
+            .portrait {
+                height: 560px;
+            }
+
+            .service {
+                grid-template-columns: 70px 0.9fr 1.1fr;
+            }
+
+            .experience {
+                min-height: 560px;
+            }
+
+            .experience-image {
+                min-height: 560px;
+            }
+
+            .experience-text {
+                padding: 60px 7%;
+            }
+
+            .gallery {
+                gap: 12px;
+            }
+
+            .gallery img {
+                height: 360px;
+            }
+
+            .visit-grid {
+                gap: 60px;
+            }
+        }
+
+        @media (max-width: 800px) {
+
+            .container {
+                width: 90%;
+            }
+
+            .logo {
+                font-size: 23px;
+            }
+
+            .nav-button {
+                padding: 9px 15px;
+                white-space: nowrap;
+            }
+
+            .hero {
+                min-height: 650px;
+                background-position: 62% center;
+            }
+
+            .hero-content {
+                padding-top: 70px;
+                max-width: 560px;
+            }
+
+            h1 {
+                font-size: clamp(54px, 12vw, 76px);
+                line-height: 0.92;
+            }
+
+            h2 {
+                font-size: clamp(42px, 8vw, 60px);
+            }
+
+            .hero p,
+            .large-text {
+                font-size: 17px;
+            }
+
+            .portrait {
+                height: min(70vh, 520px);
+                object-position: center;
+            }
+
+            .services-heading {
+                margin-bottom: 40px;
+            }
+
+            .service h3 {
+                font-size: 31px;
+            }
+
+            .experience {
+                min-height: 0;
+            }
+
+            .experience-image {
+                min-height: 420px;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery img,
+            .gallery img:nth-child(2) {
+                height: 340px;
+                margin-top: 0;
+            }
+
+            .gallery img:last-child {
+                grid-column: 1 / -1;
+                height: 400px;
+            }
+
+            .visit-grid {
+                gap: 55px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: 88%;
+            }
+
+            header {
+                border-bottom-color: rgba(255,255,255,0.18);
+            }
+
+            .navbar {
+                height: 70px;
+            }
+
+            .logo {
+                font-size: 20px;
+                line-height: 1.05;
+            }
+
+            .logo span {
+                font-size: 7px;
+                letter-spacing: 2.5px;
+                margin-top: 5px;
+            }
+
+            nav {
+                gap: 0;
+            }
+
+            .nav-button {
+                font-size: 12px;
+                padding: 9px 13px;
+            }
+
+            .hero {
+                min-height: 620px;
+                align-items: flex-end;
+                padding-bottom: 60px;
+                background:
+                    linear-gradient(
+                        90deg,
+                        rgba(20,18,17,0.88),
+                        rgba(20,18,17,0.45)
+                    ),
+                    url("https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=82")
+                    64% center / cover no-repeat;
+            }
+
+            .hero-content {
+                padding-top: 95px;
+                max-width: 100%;
+            }
+
+            .small-title {
+                font-size: 10px;
+                letter-spacing: 2.2px;
+            }
+
+            h1 {
+                font-size: clamp(46px, 15vw, 62px);
+                line-height: 0.94;
+                letter-spacing: -1px;
+                margin: 16px 0 24px;
+            }
+
+            h2 {
+                font-size: clamp(38px, 11vw, 50px);
+                line-height: 1.02;
+            }
+
+            .hero p {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            .hero-buttons {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 10px;
+                margin-top: 28px;
+            }
+
+            .hero-buttons .button {
+                width: 100%;
+                text-align: center;
+                padding: 14px 18px;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .intro-grid {
+                gap: 35px;
+            }
+
+            .portrait {
+                height: 430px;
+                border-radius: 150px 150px 8px 8px;
+            }
+
+            .large-text {
+                font-size: 16px;
+            }
+
+            .signature {
+                font-size: 24px;
+                margin-top: 28px;
+            }
+
+            .services-heading {
+                margin-bottom: 32px;
+            }
+
+            .services-heading p {
+                font-size: 15px;
+            }
+
+            .service {
+                grid-template-columns: 36px 1fr;
+                gap: 12px;
+                padding: 25px 0;
+            }
+
+            .service h3 {
+                font-size: 28px;
+                line-height: 1.1;
+            }
+
+            .service p {
+                grid-column: 2;
+                font-size: 15px;
+                line-height: 1.55;
+            }
+
+            .experience-image {
+                min-height: 340px;
+            }
+
+            .experience-text {
+                padding: 55px 6%;
+            }
+
+            .experience-text p {
+                font-size: 16px;
+            }
+
+            .gallery-heading {
+                margin-bottom: 35px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .gallery img,
+            .gallery img:nth-child(2),
+            .gallery img:last-child {
+                grid-column: auto;
+                height: 330px;
+                margin-top: 0;
+            }
+
+            .visit-grid {
+                gap: 45px;
+            }
+
+            .phone {
+                font-size: 30px;
+                overflow-wrap: anywhere;
+            }
+
+            .detail-row {
+                gap: 15px;
+                align-items: flex-start;
+            }
+
+            .detail-row span,
+            .detail-row strong {
+                max-width: 50%;
+            }
+
+            .detail-row strong {
+                text-align: right;
+            }
+
+            .cta .button {
+                width: 100%;
+                max-width: 320px;
+            }
+
+            footer {
+                padding: 45px 0 25px;
+            }
+
+            .footer-top {
+                gap: 30px;
+                padding-bottom: 35px;
+            }
+        }
+
+        @media (max-width: 380px) {
+
+            .logo {
+                font-size: 18px;
+            }
+
+            .nav-button {
+                font-size: 11px;
+                padding: 8px 11px;
+            }
+
+            h1 {
+                font-size: 43px;
+            }
+
+            .portrait {
+                height: 380px;
+            }
+
+            .phone {
+                font-size: 27px;
+            }
+        }
+
     </style>
 </head>
 
