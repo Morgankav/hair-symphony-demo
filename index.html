@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hair Symphony | Clarinbridge</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: #f6f2ed;
+            color: #201d1b;
+            font-family: "DM Sans", sans-serif;
+            line-height: 1.6;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1150px, 90%);
+            margin: auto;
+        }
+
+        .small-title {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 11px;
+            font-weight: 600;
+            color: #9b7961;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Playfair Display", serif;
+            font-weight: 500;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 20;
+
+            border-bottom: 1px solid rgba(255,255,255,0.25);
+        }
+
+        .navbar {
+            height: 90px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            color: white;
+        }
+
+        .logo {
+            font-family: "Playfair Display", serif;
+            font-size: 27px;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            display: block;
+
+            font-family: "DM Sans", sans-serif;
+            font-size: 8px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+
+            margin-top: 3px;
+
+            color: #e5d9d0;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        nav a {
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            opacity: 0.65;
+        }
+
+        .nav-button {
+            border: 1px solid rgba(255,255,255,0.7);
+
+            padding: 10px 19px;
+            border-radius: 30px;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 760px;
+
+            display: flex;
+            align-items: center;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(20,18,17,0.85),
+                    rgba(20,18,17,0.25)
+                ),
+                url("https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1800&q=85")
+                center / cover no-repeat;
+        }
+
+        .hero-content {
+            padding-top: 80px;
+            max-width: 760px;
+        }
+
+        .hero .small-title {
+            color: #dbc4b4;
+        }
+
+        h1 {
+            font-size: clamp(65px, 9vw, 120px);
+            line-height: 0.85;
+
+            margin: 20px 0 30px;
+
+            letter-spacing: -3px;
+        }
+
+        h1 em {
+            font-weight: 500;
+            color: #dfc6b6;
+        }
+
+        .hero p {
+            max-width: 540px;
+
+            font-size: 18px;
+
+            color: #eee7e2;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+
+            padding: 14px 25px;
+
+            border-radius: 40px;
+
+            background: #ead8ca;
+            color: #201d1b;
+
+            font-weight: 600;
+            font-size: 14px;
+
+            transition: 0.2s;
+        }
+
+        .button:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        .button-outline {
+            background: transparent;
+            color: white;
+
+            border: 1px solid rgba(255,255,255,0.7);
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        section {
+            padding: 110px 0;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 90px;
+
+            align-items: center;
+        }
+
+        .portrait {
+            height: 650px;
+            object-fit: cover;
+
+            border-radius: 220px 220px 8px 8px;
+        }
+
+        h2 {
+            font-size: clamp(48px, 6vw, 75px);
+            line-height: 1;
+
+            margin: 15px 0 28px;
+        }
+
+        .large-text {
+            font-size: 18px;
+            color: #655b55;
+        }
+
+        .signature {
+            margin-top: 35px;
+
+            font-family: "Playfair Display", serif;
+            font-style: italic;
+
+            font-size: 27px;
+
+            color: #9b7961;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services-section {
+            background: #211e1c;
+            color: white;
+        }
+
+        .services-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            gap: 40px;
+
+            margin-bottom: 60px;
+        }
+
+        .services-heading h2 {
+            margin-bottom: 0;
+        }
+
+        .services-heading p {
+            max-width: 420px;
+            color: #bbb1aa;
+        }
+
+        .services {
+            border-top: 1px solid #514a46;
+        }
+
+        .service {
+            display: grid;
+            grid-template-columns: 100px 1fr 1fr;
+            gap: 25px;
+
+            align-items: center;
+
+            padding: 30px 0;
+
+            border-bottom: 1px solid #514a46;
+        }
+
+        .service-number {
+            color: #a98c78;
+            font-size: 13px;
+        }
+
+        .service h3 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        .service p {
+            color: #bcb2ac;
+            margin: 0;
+        }
+
+
+        /* =========================
+           EXPERIENCE / IMAGE
+        ========================= */
+
+        .experience {
+            padding: 0;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            min-height: 650px;
+        }
+
+        .experience-image {
+            min-height: 650px;
+
+            background:
+                url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1400&q=85")
+                center / cover;
+        }
+
+        .experience-text {
+            background: #d9c2b1;
+
+            display: flex;
+            align-items: center;
+
+            padding: 80px;
+        }
+
+        .experience-inner {
+            max-width: 500px;
+        }
+
+        .experience-text .small-title {
+            color: #6b5140;
+        }
+
+        .experience-text p {
+            color: #55473f;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           GALLERY
+        ========================= */
+
+        .gallery-heading {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 55px;
+        }
+
+        .gallery {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr 1fr;
+
+            gap: 15px;
+        }
+
+        .gallery img {
+            height: 430px;
+            object-fit: cover;
+        }
+
+        .gallery img:nth-child(2) {
+            margin-top: 50px;
+        }
+
+
+        /* =========================
+           VISIT
+        ========================= */
+
+        .visit {
+            background: #eee4dc;
+        }
+
+        .visit-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 100px;
+        }
+
+        .details {
+            margin-top: 35px;
+        }
+
+        .detail-row {
+            padding: 17px 0;
+
+            display: flex;
+            justify-content: space-between;
+
+            border-bottom: 1px solid #cdbdb1;
+        }
+
+        .phone {
+            font-family: "Playfair Display", serif;
+
+            font-size: 35px;
+
+            margin: 25px 0;
+        }
+
+        .phone a {
+            border-bottom: 1px solid #9b7961;
+        }
+
+
+        /* =========================
+           CALL TO ACTION
+        ========================= */
+
+        .cta {
+            background: #9b7961;
+            color: white;
+
+            text-align: center;
+        }
+
+        .cta .small-title {
+            color: #eadbd1;
+        }
+
+        .cta h2 {
+            max-width: 800px;
+            margin: 15px auto 35px;
+        }
+
+        .cta .button {
+            background: white;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #181614;
+
+            color: white;
+
+            padding: 55px 0 30px;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+
+            gap: 50px;
+
+            padding-bottom: 45px;
+
+            border-bottom: 1px solid #3d3936;
+        }
+
+        .footer-address {
+            color: #a9a09a;
+            font-size: 14px;
+        }
+
+        .demo-note {
+            padding-top: 25px;
+
+            font-size: 11px;
+
+            color: #77716d;
+
+            max-width: 750px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            nav a:not(.nav-button) {
+                display: none;
+            }
+
+            .navbar {
+                height: 75px;
+            }
+
+            .hero {
+                min-height: 680px;
+            }
+
+            h1 {
+                letter-spacing: -1px;
+            }
+
+            section {
+                padding: 75px 0;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .portrait {
+                height: 500px;
+            }
+
+            .services-heading {
+                display: block;
+            }
+
+            .service {
+                grid-template-columns: 50px 1fr;
+            }
+
+            .service p {
+                grid-column: 2;
+            }
+
+            .experience {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-image {
+                min-height: 450px;
+            }
+
+            .experience-text {
+                padding: 65px 8%;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery img,
+            .gallery img:nth-child(2) {
+                height: 400px;
+                margin-top: 0;
+            }
+
+            .visit-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .footer-top {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="#" class="logo">
+
+            Hair Symphony
+
+            <span>
+                Clarinbridge
+            </span>
+
+        </a>
+
+
+        <nav>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#services">
+                Services
+            </a>
+
+            <a href="#visit">
+                Visit
+            </a>
+
+            <a href="tel:091776649" class="nav-button">
+                Call to Book
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="small-title">
+                Hair Salon · Clarinbridge
+            </div>
+
+
+            <h1>
+
+                Hair that feels
+                <em>like you.</em>
+
+            </h1>
+
+
+            <p>
+
+                Welcome to Hair Symphony — a local salon in
+                Clarinbridge where great hair and a relaxed
+                salon experience come together.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="tel:091776649" class="button">
+                    Call to Book
+                </a>
+
+                <a href="#services" class="button button-outline">
+                    Explore the Salon
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+    <div class="container intro-grid">
+
+
+        <div>
+
+            <img
+                class="portrait"
+                src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=1000&q=85"
+                alt="Hair salon styling"
+            >
+
+        </div>
+
+
+        <div>
+
+            <div class="small-title">
+                Hair Symphony
+            </div>
+
+
+            <h2>
+                Your hair.<br>
+                Your style.
+            </h2>
+
+
+            <p class="large-text">
+
+                Hair Symphony is a local salon in Clarinbridge,
+                County Galway.
+
+            </p>
+
+
+            <p>
+
+                Whether you're keeping your signature look or
+                you're ready for something new, the salon is
+                about taking the time to help you feel confident
+                in your hair.
+
+            </p>
+
+
+            <p>
+
+                A relaxed local setting, personal service and
+                a visit that's about more than simply getting
+                your hair done.
+
+            </p>
+
+
+            <div class="signature">
+                Feel good. Look good.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="services-section" id="services">
+
+    <div class="container">
+
+
+        <div class="services-heading">
+
+            <div>
+
+                <div class="small-title">
+                    Salon Services
+                </div>
+
+                <h2>
+                    Made for your hair.
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                Contact Hair Symphony directly to discuss
+                the right appointment and current service
+                options for you.
+
+            </p>
+
+        </div>
+
+
+        <div class="services">
+
+
+            <div class="service">
+
+                <div class="service-number">
+                    01
+                </div>
+
+                <h3>
+                    Cutting & Styling
+                </h3>
+
+                <p>
+                    From a fresh trim to a new look,
+                    tailored around you and your hair.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">
+                    02
+                </div>
+
+                <h3>
+                    Colour
+                </h3>
+
+                <p>
+                    Speak with the salon about colour
+                    appointments and the look you'd
+                    like to achieve.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-number">
+                    03
+                </div>
+
+                <h3>
+                    Styling
+                </h3>
+
+                <p>
+                    Get your hair looking its best for
+                    the everyday or your next occasion.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section class="experience">
+
+
+    <div class="experience-image"></div>
+
+
+    <div class="experience-text">
+
+        <div class="experience-inner">
+
+            <div class="small-title">
+                The Salon
+            </div>
+
+
+            <h2>
+                Take some time for yourself.
+            </h2>
+
+
+            <p>
+
+                A salon appointment should be something
+                you look forward to.
+
+            </p>
+
+
+            <p>
+
+                Sit back, switch off for a while and
+                leave feeling refreshed and confident
+                in your hair.
+
+            </p>
+
+
+            <a href="tel:091776649" class="button">
+                Call 091 776 649
+            </a>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section>
+
+    <div class="container">
+
+
+        <div class="gallery-heading">
+
+            <div class="small-title">
+                Inspiration
+            </div>
+
+            <h2>
+                Find your next look.
+            </h2>
+
+        </div>
+
+
+        <div class="gallery">
+
+
+            <img
+                src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=900&q=85"
+                alt="Hair styling inspiration"
+            >
+
+
+            <img
+                src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=900&q=85"
+                alt="Hair salon"
+            >
+
+
+            <img
+                src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=900&q=85"
+                alt="Hair styling"
+            >
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     VISIT
+========================= -->
+
+<section class="visit" id="visit">
+
+    <div class="container visit-grid">
+
+
+        <div>
+
+            <div class="small-title">
+                Find Us
+            </div>
+
+
+            <h2>
+                Visit Hair Symphony.
+            </h2>
+
+
+            <p class="large-text">
+
+                Unit 3, The Bridge Centre<br>
+                Clarinbridge<br>
+                Co. Galway
+
+            </p>
+
+
+            <div class="phone">
+
+                <a href="tel:091776649">
+                    091 776 649
+                </a>
+
+            </div>
+
+
+            <a href="tel:091776649" class="button">
+                Call the Salon
+            </a>
+
+        </div>
+
+
+
+        <div>
+
+            <div class="small-title">
+                Opening Hours
+            </div>
+
+
+            <div class="details">
+
+                <div class="detail-row">
+
+                    <span>
+                        Appointments
+                    </span>
+
+                    <strong>
+                        Call the salon
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <span>
+                        Telephone
+                    </span>
+
+                    <strong>
+                        091 776 649
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-row">
+
+                    <span>
+                        Location
+                    </span>
+
+                    <strong>
+                        Clarinbridge
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <p>
+
+                For current opening hours, appointment
+                availability and service information,
+                contact the salon directly.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CALL TO ACTION
+========================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="small-title">
+            Your next appointment
+        </div>
+
+
+        <h2>
+            Ready for your next hair day?
+        </h2>
+
+
+        <a href="tel:091776649" class="button">
+            Call 091 776 649
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+
+        <div class="footer-top">
+
+
+            <div class="logo">
+
+                Hair Symphony
+
+                <span>
+                    Clarinbridge
+                </span>
+
+            </div>
+
+
+            <div class="footer-address">
+
+                Unit 3, The Bridge Centre<br>
+                Clarinbridge, Co. Galway<br>
+                091 776 649
+
+            </div>
+
+
+        </div>
+
+
+        <div class="demo-note">
+
+            DEMO WEBSITE — This website is a design concept
+            and is not the official Hair Symphony website.
+            Stock imagery is being used for demonstration
+            purposes and should be replaced with photographs
+            supplied or approved by the business before
+            publication.
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
